@@ -5,54 +5,40 @@ public class poupanca {
 
     public static void main (String[] args){
 
-        JFrame frame = new JFrame("Poupex");
-        frame.setSize(400, 300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       JFrame frame = new JFrame("Poupex"); // criação da janela
+       frame.setSize(400, 300);
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel panel = new JPanel();
-        panel.setSize(300, 500);
+       JPanel panel = new JPanel(); // fundo, onde fica TUDO
 
-        JLabel label1 = new JLabel();
-        label1.setText("Juros ao mes%: ");
+       JButton button = new JButton("OK"); // criação do botão
+       button.setPreferredSize(new Dimension(200, 30)); // Dando o tamanho do meu botão
 
-        JLabel label2 = new JLabel();
-        label2.setText("Num. de anos: ");
+       JLabel label1 = new JLabel("Juros ao mes %:"); // add texto
+       JLabel label2 = new JLabel("Num. de anos:");
+       JLabel label3 = new JLabel("Deposito mensal R$:");
+       JLabel label4 = new JLabel("Total poupado R$:");
 
-        JLabel label3 = new JLabel();
-        label3.setText("Deposito mensal R$: ");
+       JTextField textField1 = new JTextField(10); // Linha para escrever
+       JTextField textField2 = new JTextField(10);
+       JTextField textField3 = new JTextField(10);
+       JTextField textField4 = new JTextField(10);
 
-        JLabel label4 = new JLabel();
-        label4.setText("Total poupado R$: ");
+       panel.add(label1);
+       panel.add(textField1);
+       
+       panel.add(label2);
+       panel.add(textField2);
 
-        JTextArea textArea1 = new JTextArea(2, 20);
+       panel.add(label3);
+       panel.add(textField3);
 
-        JTextArea textArea2 = new JTextArea(2, 20);
+       panel.add(label4);
+       panel.add(textField4);
 
-        JTextArea textArea3 = new JTextArea(2, 20);
+       panel.add(button);
+       frame.add(panel);
 
-        JTextArea textArea4 = new JTextArea(2, 20);
-        
-        JPanel formPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        formPanel.add(label1);
-
-
-
-        // fazendo ser "exibido"
-
-        panel.add(label1);
-        panel.add(textArea1);
-
-        panel.add(label2);
-        panel.add(textArea2);
-
-        panel.add(label3);
-        panel.add(textArea3);
-
-        panel.add(label4);
-        panel.add(textArea4);
-
-        frame.add(panel);
-
-        frame.setVisible(true);
+       frame.setVisible(true); // tornando visível
     }
 }
